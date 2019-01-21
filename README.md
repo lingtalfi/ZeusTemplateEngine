@@ -98,7 +98,7 @@ if (false === $html) {
 
 The **resourceIdentifier** (pages:zeus/home) has the following notation:
 
-- <directoryAlias> <:> <templateRelativePath>
+- ```<directoryAlias> <:> <templateRelativePath>```
 
 With:
 - directoryAlias: one of the directory aliases defined with the setDirectories method
