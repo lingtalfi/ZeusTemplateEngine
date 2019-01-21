@@ -101,8 +101,8 @@ The **resourceIdentifier** (pages:zeus/home) has the following notation:
 - ```<directoryAlias> <:> <templateRelativePath>```
 
 With:
-- directoryAlias: one of the directory aliases defined with the setDirectories method
-- templateRelativePath: the relative path from the given aliased directory to the template, without the php extension
+- **directoryAlias**: one of the directory aliases defined with the setDirectories method
+- **templateRelativePath**: the relative path from the given aliased directory to the template, without the php extension
 
 
 
