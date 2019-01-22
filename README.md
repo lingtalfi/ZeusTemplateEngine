@@ -83,7 +83,7 @@ $o->setDirectories([
 
 
 // now render the template
-$html = $o->render("pages:zeus/home", [
+$html = $o->render("pages:zeus/home.php", [
     "fruit" => "apple",
 ]);
 
@@ -96,13 +96,13 @@ if (false === $html) {
 
 ```
 
-The **resourceIdentifier** (pages:zeus/home) has the following notation:
+The **resourceIdentifier** (pages:zeus/home.php) has the following notation:
 
 - ```<directoryAlias> <:> <templateRelativePath>```
 
 With:
 - **directoryAlias**: one of the directory aliases defined with the setDirectories method
-- **templateRelativePath**: the relative path from the given aliased directory to the template, without the php extension
+- **templateRelativePath**: the relative path from the given aliased directory to the template
 
 
 
@@ -110,6 +110,10 @@ With:
 
 History Log
 ------------------
+
+- 1.1.0 -- 2019-01-22
+
+    - removed implicit file extension to allow the same instance to process different file extensions if necessary
 
 - 1.0.0 -- 2019-01-21
 

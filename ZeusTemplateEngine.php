@@ -16,7 +16,7 @@ use UniversalTemplateEngine\UniversalTemplateEngineInterface;
  *
  * With:
  * - directoryId: a directory identifier set with the setDirectories method
- * - fileRelativePath: the relative path from the directory pointed by directoryId to the template, without the php extension.
+ * - fileRelativePath: the relative path from the directory pointed by directoryId to the template
  *
  * Example:
  * - pages:zeus/home
@@ -35,13 +35,11 @@ class ZeusTemplateEngine implements UniversalTemplateEngineInterface
      */
     private $directories;
 
-    private $templateExtension;
 
     public function __construct()
     {
         $this->errors = [];
         $this->directories = [];
-        $this->templateExtension = "php";
     }
 
 
@@ -53,7 +51,7 @@ class ZeusTemplateEngine implements UniversalTemplateEngineInterface
             $relativePath = $p[1];
             if (array_key_exists($dir, $this->directories)) {
                 $dirPath = $this->directories[$dir];
-                $path = $dirPath . "/" . $relativePath . "." . $this->templateExtension;
+                $path = $dirPath . "/" . $relativePath;
                 if (is_file($path)) {
                     return $this->interpret($path, $variables);
                 } else {
