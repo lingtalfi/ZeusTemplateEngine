@@ -1,9 +1,9 @@
 <?php
 
 
-namespace ZeusTemplateEngine;
+namespace Ling\ZeusTemplateEngine;
 
-use UniversalTemplateEngine\UniversalTemplateEngineInterface;
+use Ling\UniversalTemplateEngine\UniversalTemplateEngineInterface;
 
 
 /**
